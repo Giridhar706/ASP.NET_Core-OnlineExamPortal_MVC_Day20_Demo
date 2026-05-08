@@ -1,0 +1,58 @@
+﻿<h2>Online Examination Portal</h2>
+
+<hr />
+
+<form method="post">
+
+    <label>Student Name</label>
+    <br />
+    <input type="text"
+           name="studentName"
+           required />
+
+    <br /><br />
+
+    <label>Course Name</label>
+    <br />
+    <input type="text"
+           name="course"
+           required />
+
+    <br /><br />
+
+    <label>Select Theme</label>
+    <br />
+
+    <select name="theme">
+
+        <option value="Light">
+            Light
+        </option>
+
+        <option value="Dark">
+            Dark
+        </option>
+
+        <option value="Blue">
+            Blue
+        </option>
+
+    </select>
+
+    <br /><br />
+
+    <button type="submit">
+        Login
+    </button>
+
+</form>
+
+<hr />
+
+@if (ViewBag.Theme != null)
+{
+    <p>
+        Previously Selected Theme:
+        <b>@ViewBag.Theme</b>
+    </p>
+}
